@@ -12,7 +12,7 @@ body:before {
   bottom: 0;
   right: 0;
   z-index: -1;
-  background: url(img/background.jpg) no-repeat center;
+  background: url(img/bg.jpg) no-repeat center;
   background-size: cover;
 }
 
@@ -65,6 +65,17 @@ h1.title {
   font-size: 7rem;
 }
 
+footer { position: relative; }
+
+footer h2 {
+  position: absolute;
+  font-size: 5rem;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 3px 3px 1px #fff;
+}
+
 @media screen and (max-width: 767px) {
   #page-1 div {
     text-align: center!important;
@@ -88,6 +99,10 @@ h1.title {
     font-size: 12px;
   }
 
+  body:before {
+    background-position: right;
+  }
+
   section {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -107,5 +122,15 @@ h1.title {
 
   #page-8 .col-md-6 h4 {
     padding-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  footer h2 {
+    font-size: 3rem;
+    text-shadow: 1px 1px #fff;
+    top: 5px;
+    left: 10%;
+    transform: none;
   }
 }
